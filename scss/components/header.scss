@@ -1,0 +1,177 @@
+@use '../base/global' as *;
+
+.site-header {
+    position: relative;
+    z-index: 5;
+    background: $paper;
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 92px;
+        gap: 28px;
+    }
+
+    .brand {
+        flex: 0 0 auto;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -1.2px;
+
+        span {
+            color: $mint;
+        }
+
+        &:hover span {
+            color: $navy;
+        }
+    }
+
+    .main-nav ul,
+    .header-actions {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-nav ul {
+        gap: clamp(22px, 3vw, 58px);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .main-nav a,
+    .header-actions {
+        font-size: 14px;
+    }
+
+    .main-nav a:hover,
+    .sign-in:hover {
+        color: $mint;
+    }
+
+    .more-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+
+        svg {
+            width: 10px;
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 1.5;
+        }
+    }
+
+    .header-actions {
+        gap: 22px;
+    }
+
+    .icon-link {
+        display: grid;
+        width: 22px;
+        height: 22px;
+        place-items: center;
+
+        svg {
+            width: 19px;
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 1.6;
+        }
+
+        &:hover {
+            color: $mint;
+            transform: translateY(-2px);
+        }
+    }
+
+    .button-small {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 28px;
+    border: 1px solid $navy;
+    border-radius: 999px;
+    background: $navy;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+        transform: translateY(-2px);
+        background: $white;
+        color: $navy;
+    }
+}
+
+@media (max-width: 900px) {
+    .site-header {
+        .header-content {
+            gap: 18px;
+        }
+
+        .main-nav ul {
+            gap: 18px;
+        }
+
+        .header-actions {
+            gap: 14px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        .header-content {
+            min-height: 0;
+            flex-wrap: wrap;
+            gap: 14px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            font-size: 22px;
+        }
+
+        .main-nav {
+            order: 3;
+            width: 100%;
+
+            ul {
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            a {
+                font-size: 12px;
+            }
+        }
+
+        .header-actions {
+            gap: 14px;
+            font-size: 13px;
+        }
+
+        .icon-link,
+        .sign-in {
+            display: none;
+        }
+
+        .button-small {
+            padding: 8px 16px;
+        }
+    }
+}
