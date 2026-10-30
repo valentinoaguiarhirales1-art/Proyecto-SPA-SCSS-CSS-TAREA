@@ -43,8 +43,8 @@
 
 ## *✅✨ Despliegue y Entrega*
 
-*   **Repositorio:** Subido correctamente a GitHub manteniendo la carpeta raíz unificada (`mi-proyecto-spa`).
-*   **Enlace público:** Desplegado a través de *GitHub Pages* (configurando la subcarpeta correspondiente como origen de publicación para su correcta visualización).
+*   **Repositorio:** ***Subido correctamente a GitHub manteniendo la carpeta raíz unificada (`mi-proyecto-spa`).***
+*   **Enlace público:** ***Desplegado a través de *GitHub Pages* (🔗 [Ver Demo en GitHub Pages](https://github.io)).***
 
 ## *📄✨ Licencia*
 
